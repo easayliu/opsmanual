@@ -251,13 +251,6 @@ def BackendChangeValues(){
         error ''
     }
 
-    //增加对外项目的判断
-    if ("$project" == "aftc-crawl-db-api" || "$extra" == "http" || "$project" == "ai-video-app" || "$project" ==  "live-crm" ){
-        data.virtualService.enabled = true;
-    } 
-    // else {
-    //     data.virtualService.enabled = false;
-    // }
     //修改参数
     data.extra = "$env.extra"
     data.image.tag = "$tag"
